@@ -1,0 +1,2 @@
+defmodule SlackEmailBridge do
+end
