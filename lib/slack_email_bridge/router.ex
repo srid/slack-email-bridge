@@ -27,8 +27,22 @@ defmodule SlackEmailBridge.Router do
   def parse_email(postmark_hash) do
     sender = postmark_hash["FromFull"]["Name"]
     subject = postmark_hash["Subject"]
-    body = postmark_hash["TextBody"]
+
+    body = if suppress_body_from?(sender) do
+      postmark_hash["TextBody"]
+    else
+      "... _snipped_ ..."
+    end
+
     {sender, subject, body}
+  end
+
+  defp suppress_body_from?(sender) do
+    case Application.get_env(:slack_email_bridge, :suppress_body_from) do
+      nil -> false
+      ""  -> false
+      s   -> String.contains?(sender, s)
+    end
   end
 
 end

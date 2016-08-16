@@ -14,7 +14,9 @@ defmodule SlackEmailBridge.Slack do
       "icon_emoji" => ":incoming_envelope:",
       "text" => "*#{subject}*",
       "attachments" => [
-        %{"text" => body}
+        %{"text" => body,
+          "mrkdwn_in" => ["text", "pretext"]
+         }
       ]
     }
   end
