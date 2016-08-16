@@ -4,7 +4,7 @@
 
 ```
 mix deps.get
-PORT=4444 mix run --no-halt
+SLACK_WEBHOOK=<url> mix run --no-halt
 ```
 
 Verify:

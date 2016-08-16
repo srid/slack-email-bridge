@@ -1,1 +1,11 @@
-{"id":"whateve"}
+{
+    "FromName": "Srid Nouvelle Vie",
+    "From": "myemail@icloud.com",
+    "FromFull": {
+        "Email": "myemail@icloud.com",
+        "Name": "Srid Nouvelle Vie"
+    },
+    "Subject": "I'm testing",
+    "TextBody": "Hello,\r\n\r\nDid you receive this?\r\n\r\nThanks,\r\n-srid\r\n\r\n",
+    "HtmlBody": "<html><head><meta http-equiv=\"Content-Type\" content=\"text\/html charset=us-ascii\"><\/head><body style=\"word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;\" class=\"\">Hello,<div class=\"\"><br class=\"\"><\/div><div class=\"\">Did you receive <b class=\"\">this<\/b>?<\/div><div class=\"\"><br class=\"\"><\/div><div class=\"\">Thanks,<\/div><div class=\"\">-srid<\/div><div class=\"\"><br class=\"\"><\/div><\/body><\/html>"
+}

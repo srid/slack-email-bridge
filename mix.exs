@@ -14,7 +14,7 @@ defmodule SlackEmailBridge.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :cowboy, :plug],
+    [applications: [:logger, :cowboy, :plug, :httpoison],
      mod: {SlackEmailBridge, []}]
   end
 
@@ -30,6 +30,7 @@ defmodule SlackEmailBridge.Mixfile do
   defp deps do
     [{:cowboy, "~> 1.0.0"},
      {:plug, "~> 1.0"},
-     {:poison, "~> 2.0"}]
+     {:poison, "~> 2.0"},
+     {:httpoison, "~> 0.9.0"}]
   end
 end

@@ -4,3 +4,8 @@ use Mix.Config
 
 config :slack_email_bridge,
   port: System.get_env("PORT")
+
+config :slack_email_bridge,
+  slack_webhook: System.get_env("SLACK_WEBHOOK")
+
+import_config "#{Mix.env}.exs"
