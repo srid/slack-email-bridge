@@ -29,9 +29,9 @@ defmodule SlackEmailBridge.Router do
     subject = postmark_hash["Subject"]
 
     body = if suppress_body_from?(sender) do
-      postmark_hash["TextBody"]
-    else
       "... _snipped_ ..."
+    else
+      postmark_hash["TextBody"]
     end
 
     {sender, subject, body}
